@@ -1,157 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Demo Sportsbook</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">🏆 Demo Sportsbook</div>
+    <!-- HEADER -->
 
-    <div class="balance">
-        Demo Balance:
-        <strong id="balance">10,000.00</strong>
+    <header>
+
+        <div class="logo">
+            🏆 Demo Sportsbook
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#sports">Sports</a>
+            <a href="#betslip">Bet Slip</a>
+            <a href="#history">History</a>
+        </nav>
+
+        <div class="balance">
+            Demo Balance:
+            <strong id="balance">10,000.00</strong>
+        </div>
+
+    </header>
+
+
+    <!-- DEMO WARNING -->
+
+    <div class="demo-warning">
+        DEMO ONLY — NO REAL MONEY
     </div>
-</header>
 
-<div class="demo-warning">
-    DEMO ONLY — NO REAL MONEY
-</div>
 
-<main>
+    <!-- MAIN -->
 
-    <section class="sports">
-        <button class="sport-btn active" onclick="showSport('football')">
-            ⚽ Football
-        </button>
+    <main id="home">
 
-        <button class="sport-btn" onclick="showSport('cricket')">
-            🏏 Cricket
-        </button>
-    </section>
+        <!-- SPORTS -->
 
-    <section id="matches">
+        <section class="sports" id="sports">
 
-        <!-- FOOTBALL -->
+            <button
+                class="sport-btn active"
+                onclick="showSport('football')">
 
-        <div class="match-card football">
-            <h3>Manchester City vs Arsenal</h3>
-            <p>Today • 8:00 PM</p>
+                ⚽ Football
 
-            <div class="odds">
-                <button onclick="selectBet('Manchester City', 1.80)">
-                    Man City<br>
-                    <strong>1.80</strong>
-                </button>
+            </button>
 
-                <button onclick="selectBet('Draw', 3.40)">
-                    Draw<br>
-                    <strong>3.40</strong>
-                </button>
+            <button
+                class="sport-btn"
+                onclick="showSport('cricket')">
 
-                <button onclick="selectBet('Arsenal', 2.20)">
-                    Arsenal<br>
-                    <strong>2.20</strong>
-                </button>
+                🏏 Cricket
+
+            </button>
+
+        </section>
+
+
+        <!-- MATCHES -->
+
+        <section id="matches">
+
+
+            <!-- FOOTBALL MATCH 1 -->
+
+            <div class="match-card football">
+
+                <h3>
+                    Manchester City vs Arsenal
+                </h3>
+
+                <p>
+                    Today • 8:00 PM
+                </p>
+
+                <div class="odds">
+
+                    <button
+                        onclick="selectBet('Manchester City', 1.80)">
+
+                        Man City
+                        <br>
+
+                        <strong>1.80</strong>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectBet('Draw', 3.40)">
+
+                        Draw
+                        <br>
+
+                        <strong>3.40</strong>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectBet('Arsenal', 2.20)">
+
+                        Arsenal
+                        <br>
+
+                        <strong>2.20</strong>
+
+                    </button>
+
+                </div>
+
             </div>
-        </div>
 
-        <div class="match-card football">
-            <h3>Liverpool vs Chelsea</h3>
-            <p>Tomorrow • 7:30 PM</p>
 
-            <div class="odds">
-                <button onclick="selectBet('Liverpool', 1.70)">
-                    Liverpool<br>
-                    <strong>1.70</strong>
-                </button>
+            <!-- FOOTBALL MATCH 2 -->
 
-                <button onclick="selectBet('Draw', 3.60)">
-                    Draw<br>
-                    <strong>3.60</strong>
-                </button>
+            <div class="match-card football">
 
-                <button onclick="selectBet('Chelsea', 2.50)">
-                    Chelsea<br>
-                    <strong>2.50</strong>
-                </button>
+                <h3>
+                    Liverpool vs Chelsea
+                </h3>
+
+                <p>
+                    Tomorrow • 7:30 PM
+                </p>
+
+                <div class="odds">
+
+                    <button
+                        onclick="selectBet('Liverpool', 1.70)">
+
+                        Liverpool
+                        <br>
+
+                        <strong>1.70</strong>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectBet('Draw', 3.60)">
+
+                        Draw
+                        <br>
+
+                        <strong>3.60</strong>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectBet('Chelsea', 2.50)">
+
+                        Chelsea
+                        <br>
+
+                        <strong>2.50</strong>
+
+                    </button>
+
+                </div>
+
             </div>
-        </div>
 
-        <!-- CRICKET -->
 
-        <div class="match-card cricket">
-            <h3>India vs Australia</h3>
-            <p>Tomorrow • 6:00 PM</p>
+            <!-- CRICKET MATCH -->
 
-            <div class="odds">
-                <button onclick="selectBet('India', 1.65)">
-                    India<br>
-                    <strong>1.65</strong>
-                </button>
+            <div class="match-card cricket">
 
-                <button onclick="selectBet('Australia', 2.30)">
-                    Australia<br>
-                    <strong>2.30</strong>
-                </button>
+                <h3>
+                    India vs Australia
+                </h3>
+
+                <p>
+                    Tomorrow • 6:00 PM
+                </p>
+
+                <div class="odds">
+
+                    <button
+                        onclick="selectBet('India', 1.65)">
+
+                        India
+                        <br>
+
+                        <strong>1.65</strong>
+
+                    </button>
+
+
+                    <button
+                        onclick="selectBet('Australia', 2.30)">
+
+                        Australia
+                        <br>
+
+                        <strong>2.30</strong>
+
+                    </button>
+
+                </div>
+
             </div>
-        </div>
 
-    </section>
+        </section>
 
-    <!-- BET SLIP -->
 
-    <section class="betslip">
+        <!-- BET SLIP -->
 
-        <h2>🎫 Demo Bet Slip</h2>
+        <section
+            class="betslip"
+            id="betslip">
 
-        <p id="selectedBet">
-            Select an odd to add a bet.
-        </p>
+            <h2>
+                🎫 Demo Bet Slip
+            </h2>
 
-        <label for="stake">Demo Stake</label>
+            <p id="selectedBet">
+                Select an odd to add a bet.
+            </p>
 
-        <input
-            type="number"
-            id="stake"
-            placeholder="Enter demo amount"
-            min="1"
-        >
+            <label for="stake">
+                Demo Stake
+            </label>
 
-        <p>
-            Potential Return:
-            <strong id="return">0.00</strong>
-        </p>
+            <input
+                type="number"
+                id="stake"
+                placeholder="Enter demo amount"
+                min="1"
+            >
 
-        <button class="place-btn" onclick="placeBet()">
-            Place Demo Bet
-        </button>
+            <p>
+                Potential Return:
+                <strong id="return">
+                    0.00
+                </strong>
+            </p>
 
-    </section>
+            <button
+                class="place-btn"
+                onclick="placeBet()">
 
-    <!-- HISTORY -->
+                Place Demo Bet
 
-    <section class="history">
+            </button>
 
-        <h2>📋 Bet History</h2>
+        </section>
 
-        <div id="historyList">
-            No bets yet.
-        </div>
 
-    </section>
+        <!-- BET HISTORY -->
 
-</main>
+        <section
+            class="history"
+            id="history">
 
-<footer>
-    Demo Sportsbook • Simulation only • No real money
-</footer>
+            <h2>
+                📋 Bet History
+            </h2>
 
-<script src="app.js"></script>
+            <div id="historyList">
+
+                No bets yet.
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        Demo Sportsbook
+        • Simulation only
+        • No real money
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
 
 </body>
+
 </html>
