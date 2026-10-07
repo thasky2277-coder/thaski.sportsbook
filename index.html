@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Sportsbook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+    <div class="logo">🏆 Demo Sportsbook</div>
+
+    <div class="balance">
+        Demo Balance:
+        <strong id="balance">10,000.00</strong>
+    </div>
+</header>
+
+<div class="demo-warning">
+    DEMO ONLY — NO REAL MONEY
+</div>
+
+<main>
+
+    <section class="sports">
+        <button class="sport-btn active" onclick="showSport('football')">
+            ⚽ Football
+        </button>
+
+        <button class="sport-btn" onclick="showSport('cricket')">
+            🏏 Cricket
+        </button>
+    </section>
+
+    <section id="matches">
+
+        <!-- FOOTBALL -->
+
+        <div class="match-card football">
+            <h3>Manchester City vs Arsenal</h3>
+            <p>Today • 8:00 PM</p>
+
+            <div class="odds">
+                <button onclick="selectBet('Manchester City', 1.80)">
+                    Man City<br>
+                    <strong>1.80</strong>
+                </button>
+
+                <button onclick="selectBet('Draw', 3.40)">
+                    Draw<br>
+                    <strong>3.40</strong>
+                </button>
+
+                <button onclick="selectBet('Arsenal', 2.20)">
+                    Arsenal<br>
+                    <strong>2.20</strong>
+                </button>
+            </div>
+        </div>
+
+        <div class="match-card football">
+            <h3>Liverpool vs Chelsea</h3>
+            <p>Tomorrow • 7:30 PM</p>
+
+            <div class="odds">
+                <button onclick="selectBet('Liverpool', 1.70)">
+                    Liverpool<br>
+                    <strong>1.70</strong>
+                </button>
+
+                <button onclick="selectBet('Draw', 3.60)">
+                    Draw<br>
+                    <strong>3.60</strong>
+                </button>
+
+                <button onclick="selectBet('Chelsea', 2.50)">
+                    Chelsea<br>
+                    <strong>2.50</strong>
+                </button>
+            </div>
+        </div>
+
+        <!-- CRICKET -->
+
+        <div class="match-card cricket">
+            <h3>India vs Australia</h3>
+            <p>Tomorrow • 6:00 PM</p>
+
+            <div class="odds">
+                <button onclick="selectBet('India', 1.65)">
+                    India<br>
+                    <strong>1.65</strong>
+                </button>
+
+                <button onclick="selectBet('Australia', 2.30)">
+                    Australia<br>
+                    <strong>2.30</strong>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- BET SLIP -->
+
+    <section class="betslip">
+
+        <h2>🎫 Demo Bet Slip</h2>
+
+        <p id="selectedBet">
+            Select an odd to add a bet.
+        </p>
+
+        <label for="stake">Demo Stake</label>
+
+        <input
+            type="number"
+            id="stake"
+            placeholder="Enter demo amount"
+            min="1"
+        >
+
+        <p>
+            Potential Return:
+            <strong id="return">0.00</strong>
+        </p>
+
+        <button class="place-btn" onclick="placeBet()">
+            Place Demo Bet
+        </button>
+
+    </section>
+
+    <!-- HISTORY -->
+
+    <section class="history">
+
+        <h2>📋 Bet History</h2>
+
+        <div id="historyList">
+            No bets yet.
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    Demo Sportsbook • Simulation only • No real money
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
