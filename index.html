@@ -46,25 +46,53 @@
 
     <main id="home">
 
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <h1>
+                Welcome to Demo Sportsbook
+            </h1>
+
+            <p>
+                Practice sports predictions using demo credits.
+            </p>
+
+            <a href="#sports" class="hero-btn">
+                Explore Matches
+            </a>
+
+        </section>
+
+
         <!-- SPORTS -->
 
-        <section class="sports" id="sports">
+        <section id="sports">
 
-            <button
-                class="sport-btn active"
-                onclick="showSport('football')">
+            <div class="section-title">
+                <h2>Sports</h2>
+                <p>Select a sport to view available matches.</p>
+            </div>
 
-                ⚽ Football
+            <div class="sports">
 
-            </button>
+                <button
+                    class="sport-btn active"
+                    onclick="showSport('football')">
 
-            <button
-                class="sport-btn"
-                onclick="showSport('cricket')">
+                    ⚽ Football
 
-                🏏 Cricket
+                </button>
 
-            </button>
+                <button
+                    class="sport-btn"
+                    onclick="showSport('cricket')">
+
+                    🏏 Cricket
+
+                </button>
+
+            </div>
 
         </section>
 
@@ -78,13 +106,28 @@
 
             <div class="match-card football">
 
-                <h3>
-                    Manchester City vs Arsenal
-                </h3>
+                <div class="match-header">
 
-                <p>
-                    Today • 8:00 PM
-                </p>
+                    <div>
+                        <span class="league">
+                            ⚽ Premier League
+                        </span>
+
+                        <h3>
+                            Manchester City vs Arsenal
+                        </h3>
+
+                        <p>
+                            Today • 8:00 PM
+                        </p>
+                    </div>
+
+                    <span class="match-status">
+                        UPCOMING
+                    </span>
+
+                </div>
+
 
                 <div class="odds">
 
@@ -92,30 +135,22 @@
                         onclick="selectBet('Manchester City', 1.80)">
 
                         Man City
-                        <br>
-
                         <strong>1.80</strong>
 
                     </button>
-
 
                     <button
                         onclick="selectBet('Draw', 3.40)">
 
                         Draw
-                        <br>
-
                         <strong>3.40</strong>
 
                     </button>
-
 
                     <button
                         onclick="selectBet('Arsenal', 2.20)">
 
                         Arsenal
-                        <br>
-
                         <strong>2.20</strong>
 
                     </button>
@@ -129,13 +164,28 @@
 
             <div class="match-card football">
 
-                <h3>
-                    Liverpool vs Chelsea
-                </h3>
+                <div class="match-header">
 
-                <p>
-                    Tomorrow • 7:30 PM
-                </p>
+                    <div>
+                        <span class="league">
+                            ⚽ Premier League
+                        </span>
+
+                        <h3>
+                            Liverpool vs Chelsea
+                        </h3>
+
+                        <p>
+                            Tomorrow • 7:30 PM
+                        </p>
+                    </div>
+
+                    <span class="match-status">
+                        UPCOMING
+                    </span>
+
+                </div>
+
 
                 <div class="odds">
 
@@ -143,30 +193,22 @@
                         onclick="selectBet('Liverpool', 1.70)">
 
                         Liverpool
-                        <br>
-
                         <strong>1.70</strong>
 
                     </button>
-
 
                     <button
                         onclick="selectBet('Draw', 3.60)">
 
                         Draw
-                        <br>
-
                         <strong>3.60</strong>
 
                     </button>
-
 
                     <button
                         onclick="selectBet('Chelsea', 2.50)">
 
                         Chelsea
-                        <br>
-
                         <strong>2.50</strong>
 
                     </button>
@@ -180,13 +222,28 @@
 
             <div class="match-card cricket">
 
-                <h3>
-                    India vs Australia
-                </h3>
+                <div class="match-header">
 
-                <p>
-                    Tomorrow • 6:00 PM
-                </p>
+                    <div>
+                        <span class="league">
+                            🏏 International Cricket
+                        </span>
+
+                        <h3>
+                            India vs Australia
+                        </h3>
+
+                        <p>
+                            Tomorrow • 6:00 PM
+                        </p>
+                    </div>
+
+                    <span class="match-status">
+                        UPCOMING
+                    </span>
+
+                </div>
+
 
                 <div class="odds">
 
@@ -194,19 +251,14 @@
                         onclick="selectBet('India', 1.65)">
 
                         India
-                        <br>
-
                         <strong>1.65</strong>
 
                     </button>
-
 
                     <button
                         onclick="selectBet('Australia', 2.30)">
 
                         Australia
-                        <br>
-
                         <strong>2.30</strong>
 
                     </button>
@@ -224,9 +276,15 @@
             class="betslip"
             id="betslip">
 
-            <h2>
-                🎫 Demo Bet Slip
-            </h2>
+            <div class="section-title">
+
+                <h2>🎫 Demo Bet Slip</h2>
+
+                <p>
+                    Select an odd above to add your demo prediction.
+                </p>
+
+            </div>
 
             <p id="selectedBet">
                 Select an odd to add a bet.
@@ -261,15 +319,21 @@
         </section>
 
 
-        <!-- BET HISTORY -->
+        <!-- HISTORY -->
 
         <section
             class="history"
             id="history">
 
-            <h2>
-                📋 Bet History
-            </h2>
+            <div class="section-title">
+
+                <h2>📋 Bet History</h2>
+
+                <p>
+                    Your demo predictions will appear here.
+                </p>
+
+            </div>
 
             <div id="historyList">
 
@@ -292,8 +356,6 @@
 
     </footer>
 
-
-    <!-- JAVASCRIPT -->
 
     <script src="app.js"></script>
 
