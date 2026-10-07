@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.balance {
+    background: #1f2937;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.demo-warning {
+    text-align: center;
+    background: #f59e0b;
+    color: #111;
+    padding: 8px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.sports {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sport-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    font-size: 16px;
+}
+
+.sport-btn.active {
+    background: #2563eb;
+    color: white;
+}
+
+.match-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.match-card h3 {
+    margin-bottom: 8px;
+}
+
+.match-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.odds {
+    display: flex;
+    gap: 10px;
+}
+
+.odds button {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: #f8fafc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.odds button:hover {
+    background: #e5e7eb;
+}
+
+.odds strong {
+    color: #2563eb;
+    font-size: 18px;
+}
+
+.betslip {
+    background: white;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.betslip h2 {
+    margin-bottom: 15px;
+}
+
+.betslip input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.place-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #16a34a;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.place-btn:hover {
+    background: #15803d;
+}
+
+.history {
+    background: white;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.history h2 {
+    margin-bottom: 15px;
+}
+
+.history-item {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+.cricket {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .odds {
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
